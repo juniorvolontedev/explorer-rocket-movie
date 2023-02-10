@@ -6,4 +6,19 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  :root {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-weight: 400;
+    font-size: 1.6rem;
+    background: ${({ theme }) => theme.COLORS.BODY};
+    color: ${({ theme }) => theme.COLORS.TEXT}
+  }
+
+  body, input, textarea, select, button, ::placeholder {
+    font-family: 'Roboto Slab', serif;
+  }
 `;
