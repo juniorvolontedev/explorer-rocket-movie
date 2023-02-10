@@ -21,4 +21,12 @@ export default createGlobalStyle`
   body, input, textarea, select, button, ::placeholder {
     font-family: 'Roboto Slab', serif;
   }
+
+  a, button {
+    transition: all ease .4s;
+  }
+
+  a:hover, button:hover {
+    filter: brightness(1.2);
+  }
 `;
