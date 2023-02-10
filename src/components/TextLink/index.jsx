@@ -1,5 +1,10 @@
 import { Container } from "./styles";
 
-export function TextLink({ label, ...rest }) {
-  return <Container {...rest}>{label}</Container>;
+export function TextLink({ icon: Icon, label, ...rest }) {
+  return (
+    <Container {...rest}>
+      {Icon && <Icon size={20} />}
+      {label}
+    </Container>
+  );
 }

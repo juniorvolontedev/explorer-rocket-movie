@@ -5,6 +5,10 @@ export const Container = styled.main`
   display: grid;
   grid-template-columns: 63.7rem 1fr;
   height: 100vh;
+
+  @media (max-width: 640px) {
+    display: flex;
+  }
 `;
 
 export const Form = styled.form`
@@ -12,7 +16,7 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  max-width: 34.3rem;
+  max-width: 37.5rem;
   margin: 0 auto;
 
   header {

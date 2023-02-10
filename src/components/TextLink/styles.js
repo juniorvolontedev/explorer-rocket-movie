@@ -8,4 +8,7 @@ export const Container = styled(Link)`
   color: ${({ theme }) => theme.COLORS.PRIMARY};
   text-decoration: none;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 `;
