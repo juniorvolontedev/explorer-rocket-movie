@@ -16,11 +16,15 @@ export const Container = styled.div`
     font-size: 1.6rem;
     line-height: 2.1rem;
     font-weight: 400;
-    padding: 0 2rem 0 5.2rem;
+    padding: 0 2rem;
   }
 
   ::placeholder {
     color: ${({ theme }) => theme.COLORS.PLACEHOLDER};
+  }
+
+  svg + input {
+    padding: 0 2rem 0 5.2rem;
   }
 
   svg {
