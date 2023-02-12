@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.button`
   display: flex;
@@ -16,4 +17,9 @@ export const Container = styled.button`
   color: ${({ theme }) => theme.COLORS.BUTTON_TEXT_COLOR};
   padding: 0 3.2rem;
   cursor: pointer;
+`;
+
+export const ContainerLink = styled(Container).attrs({ as: Link })`
+  width: max-content;
+  text-decoration: none;
 `;

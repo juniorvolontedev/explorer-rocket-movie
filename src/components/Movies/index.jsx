@@ -9,7 +9,7 @@ export function Movies() {
       <header>
         <h2>Meus Filmes</h2>
 
-        <Button icon={FiPlus} label="Adicionar filme" />
+        <Button type="link" to="/new" icon={FiPlus} label="Adicionar filme" />
       </header>
 
       <Loop>
