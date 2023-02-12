@@ -5,11 +5,12 @@ export function Button({
   label,
   type = "button",
   to = "#",
+  isDelete = false,
   ...rest
 }) {
   if (type == "link") {
     return (
-      <ContainerLink to={to} type={type} {...rest}>
+      <ContainerLink to={to} type={type} isDelete={isDelete} {...rest}>
         {Icon && <Icon size={20} />}
         {label}
       </ContainerLink>
@@ -17,7 +18,7 @@ export function Button({
   }
 
   return (
-    <Container type={type} {...rest}>
+    <Container type={type} isDelete={isDelete} {...rest}>
       {Icon && <Icon size={20} />}
       {label}
     </Container>

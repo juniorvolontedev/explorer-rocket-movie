@@ -3,6 +3,7 @@ import { Container } from "./styles";
 import { MainScreen } from "../../components/MainScreen";
 import { Brand } from "../../components/Brand";
 import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 import { Profile } from "../../components/Profile";
 import { TextLink } from "../../components/TextLink";
 
@@ -37,6 +38,11 @@ export function NewMovie() {
 
           <div>
             <Input type="tag" tags={["Node JS", "React JS"]} />
+          </div>
+
+          <div className="cols2">
+            <Button label="Excluir filme" isDelete={true} />
+            <Button label="Salvar alterações" />
           </div>
         </Container>
       </main>
