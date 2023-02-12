@@ -6,6 +6,10 @@ export const Container = styled.article`
   border-radius: 1.6rem;
   margin-bottom: 2.4rem;
 
+  a {
+    text-decoration: none;
+  }
+
   h3 {
     font-weight: 700;
     font-size: 24px;
@@ -35,23 +39,5 @@ export const Container = styled.article`
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    color: ${({ theme }) => theme.COLORS.TEXT_TAG};
-
-    li {
-      background: ${({ theme }) => theme.COLORS.BUTTON_TEXT_COLOR};
-      padding: 0.5rem 1.6rem;
-      border-radius: 0.8rem;
-    }
   }
 `;

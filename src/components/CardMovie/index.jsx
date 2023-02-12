@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { Container } from "./styles";
+import { Tags } from "../Tags";
 
 export function CardMovie({ title, rating, tags = [], children, ...rest }) {
   const stars = [];
@@ -12,17 +14,15 @@ export function CardMovie({ title, rating, tags = [], children, ...rest }) {
 
   return (
     <Container {...rest}>
-      <h3>{title}</h3>
+      <Link to="/details">
+        <h3>{title}</h3>
 
-      <div className="rating">{stars.map((star) => star)}</div>
+        <div className="rating">{stars.map((star) => star)}</div>
 
-      {children}
+        {children}
 
-      <ul>
-        {tags.map((name, index) => (
-          <li key={index}>{name}</li>
-        ))}
-      </ul>
+        <Tags tags={tags} />
+      </Link>
     </Container>
   );
 }
