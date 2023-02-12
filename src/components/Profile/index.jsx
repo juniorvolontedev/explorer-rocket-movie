@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
 export function Profile() {
@@ -7,10 +8,12 @@ export function Profile() {
         <strong>Junior Volonte</strong>
         <span>Sair</span>
       </div>
-      <img
-        src="https://github.com/juniorvolontedev.png"
-        alt="Foto de Junior Volonte"
-      />
+      <Link to="/profile">
+        <img
+          src="https://github.com/juniorvolontedev.png"
+          alt="Foto de Junior Volonte"
+        />
+      </Link>
     </Container>
   );
 }

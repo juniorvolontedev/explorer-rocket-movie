@@ -16,7 +16,7 @@ export const Container = styled.button`
   font-size: 1.6rem;
   line-height: 2.1rem;
   color: ${({ theme, isDelete }) =>
-    isDelete ? theme.COLORS.PRIMARY : theme.COLORS.TEXT_COLOR};
+    isDelete ? theme.COLORS.PRIMARY : theme.COLORS.BUTTON_TEXT_COLOR};
   padding: 0 3.2rem;
   cursor: pointer;
 `;
