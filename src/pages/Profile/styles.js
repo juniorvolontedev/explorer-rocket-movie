@@ -23,7 +23,7 @@ export const Container = styled.div`
       border-radius: 50%;
     }
 
-    i {
+    label {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -34,9 +34,14 @@ export const Container = styled.div`
       position: absolute;
       right: 0;
       bottom: 0;
+      cursor: pointer;
 
       svg {
         color: ${({ theme }) => theme.COLORS.BUTTON_TEXT_COLOR};
+      }
+
+      input {
+        display: none;
       }
     }
   }

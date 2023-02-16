@@ -1,7 +1,17 @@
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 import { Link } from "react-router-dom";
 import { Container } from "./styles";
+import avatarPlaceholder from "../../assets/avatar_placeholder.png";
+import { api } from "../../services/api";
 
 export function Profile() {
+  const { signOut, user } = useAuth();
+
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
+
   return (
     <Container>
       <div>
@@ -9,10 +19,7 @@ export function Profile() {
         <span>Sair</span>
       </div>
       <Link to="/profile">
-        <img
-          src="https://github.com/juniorvolontedev.png"
-          alt="Foto de Junior Volonte"
-        />
+        <img src={avatarUrl} alt="Foto de Junior Volonte" />
       </Link>
     </Container>
   );
