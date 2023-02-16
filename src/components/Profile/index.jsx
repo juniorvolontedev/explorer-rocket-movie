@@ -7,6 +7,12 @@ import { api } from "../../services/api";
 
 export function Profile() {
   const { signOut, user } = useAuth();
+  const navigation = useNavigate();
+
+  function handleSignOut() {
+    navigation("/");
+    signOut();
+  }
 
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
@@ -15,8 +21,10 @@ export function Profile() {
   return (
     <Container>
       <div>
-        <strong>Junior Volonte</strong>
-        <span>Sair</span>
+        <strong>{user.name}</strong>
+        <button type="button" onClick={handleSignOut}>
+          Sair
+        </button>
       </div>
       <Link to="/profile">
         <img src={avatarUrl} alt="Foto de Junior Volonte" />

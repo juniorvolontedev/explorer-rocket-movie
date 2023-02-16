@@ -19,11 +19,16 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.TEXT};
   }
 
-  span {
+  button {
+    background: none;
+    border: none;
+    display: inline;
+    text-align: right;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     color: ${({ theme }) => theme.COLORS.PLACEHOLDER};
+    cursor: pointer;
   }
 
   img {
