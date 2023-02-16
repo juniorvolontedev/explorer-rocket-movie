@@ -3,8 +3,8 @@ import { Container } from "./styles";
 export function Tags({ tags = [], ...rest }) {
   return (
     <Container>
-      {tags.map((name, index) => (
-        <li key={index}>{name}</li>
+      {tags.map((tag) => (
+        <li key={tag.id}>{tag.name}</li>
       ))}
     </Container>
   );

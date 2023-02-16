@@ -3,7 +3,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { Container } from "./styles";
 import { Tags } from "../Tags";
 
-export function CardMovie({ title, rating, tags = [], children, ...rest }) {
+export function CardMovie({ id, title, rating, tags = [], children, ...rest }) {
   const stars = [];
 
   for (let i = 1; i <= 5; i++) {
@@ -14,7 +14,7 @@ export function CardMovie({ title, rating, tags = [], children, ...rest }) {
 
   return (
     <Container {...rest}>
-      <Link to="/details">
+      <Link to={`/details/${id}`}>
         <h3>{title}</h3>
 
         <div className="rating">{stars.map((star) => star)}</div>

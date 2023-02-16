@@ -6,13 +6,16 @@ export function Input({
   type = "text",
   isNew = false,
   tags = [],
+  onChange = () => {},
+  onAdd = () => {},
+  onRemove = () => {},
   ...rest
 }) {
   if (type == "textarea") {
     return (
       <Container>
         {Icon && <Icon size={20} />}
-        <textarea {...rest}></textarea>
+        <textarea onChange={onChange} {...rest}></textarea>
       </Container>
     );
   }
@@ -30,17 +33,19 @@ export function Input({
                 type="text"
                 value={value}
               />
-              <FiX />
+              <FiX onClick={() => onRemove(value)} />
             </div>
           ))}
 
           <div>
             <input
+              onChange={onChange}
               className="new-tag"
               type="text"
               placeholder="Novo marcador"
+              {...rest}
             />
-            <FiPlus />
+            <FiPlus onClick={onAdd} />
           </div>
         </div>
       </InputTag>
@@ -50,7 +55,7 @@ export function Input({
   return (
     <Container>
       {Icon && <Icon size={20} />}
-      <input type={type} {...rest} />
+      <input type={type} onChange={onChange} {...rest} />
     </Container>
   );
 }

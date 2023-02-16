@@ -9,7 +9,7 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/details" element={<Details />} />
+      <Route path="/details/:id" element={<Details />} />
       <Route path="/new" element={<NewMovie />} />
       <Route path="/profile" element={<Profile />} />
     </Routes>
