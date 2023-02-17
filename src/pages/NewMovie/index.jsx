@@ -109,7 +109,11 @@ export function NewMovie() {
             />
           </div>
 
-          <Button label="Salvar alterações" onClick={handleNewMovie} />
+          <Button
+            label="Salvar alterações"
+            isdelete={false}
+            onClick={handleNewMovie}
+          />
         </Container>
       </main>
     </MainScreen>
