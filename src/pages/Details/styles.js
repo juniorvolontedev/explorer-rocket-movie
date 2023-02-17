@@ -69,4 +69,8 @@ export const Container = styled.article`
       line-height: 2.1rem;
     }
   }
+
+  button {
+    margin-top: 6rem;
+  }
 `;
